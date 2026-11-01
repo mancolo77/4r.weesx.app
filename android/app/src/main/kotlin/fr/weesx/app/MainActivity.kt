@@ -1,4 +1,4 @@
-package 4r.weesx.app
+package fr.weesx.app
 
 import io.flutter.embedding.android.FlutterActivity
 
