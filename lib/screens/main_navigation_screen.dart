@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
-import 'tabs/matches_tab.dart';
-import 'tabs/tournaments_tab.dart';
-import 'tabs/favorites_tab.dart';
+import 'tabs/overview_tab.dart';
+import 'tabs/calendar_tab.dart';
+import 'tabs/my_teams_tab.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   final int initialIndex;
@@ -14,16 +14,15 @@ class MainNavigationScreen extends StatefulWidget {
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
   late int _currentIndex;
   final List<Widget> _tabs = const [
-    MatchesTab(),
-    TournamentsTab(),
-    FavoritesTab(),
+    OverviewTab(),
+    CalendarTab(),
+    MyTeamsTab(),
   ];
 
   @override
   void initState() {
     super.initState();
     _currentIndex = widget.initialIndex;
-    
   }
 
   @override
@@ -47,9 +46,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           type: BottomNavigationBarType.fixed,
           elevation: 0,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.sports_cricket), label: 'Fixtures'),
-            BottomNavigationBarItem(icon: Icon(Icons.emoji_events), label: 'Series'),
-            BottomNavigationBarItem(icon: Icon(Icons.star), label: 'My Teams'),
+            BottomNavigationBarItem(icon: Icon(Icons.dashboard_rounded), label: 'Overview'),
+            BottomNavigationBarItem(icon: Icon(Icons.calendar_month_rounded), label: 'Calendar'),
+            BottomNavigationBarItem(icon: Icon(Icons.shield_rounded), label: 'My Teams'),
           ],
         ),
       ),
