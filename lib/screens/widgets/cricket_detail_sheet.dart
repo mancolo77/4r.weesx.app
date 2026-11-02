@@ -197,3 +197,4 @@ class _MatchDetailsModalState extends State<_MatchDetailsModal> with SingleTicke
     );
   }
 }
+

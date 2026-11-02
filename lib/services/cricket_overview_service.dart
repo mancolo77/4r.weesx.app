@@ -248,3 +248,4 @@ class CricketOverviewService with ChangeNotifier {
     notifyListeners();
   }
 }
+
